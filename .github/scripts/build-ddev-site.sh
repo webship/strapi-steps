@@ -62,9 +62,11 @@ const accounts = [
 process.stdout.write(Buffer.from(JSON.stringify({ owner: accounts[0], accounts })).toString("base64"));'
 }
 
-# strapi-site.mjs with the Node.js of the web container, in the folder of the app.
+# strapi-site.mjs with the Node.js of the web container, in the folder of the app. The accounts go in
+# on the standard input, as a first line before the script: on no command line a failed run prints.
 site_script() {
-  ddev exec -d "$APP" "STRAPI_SITE_ACCOUNTS=$(accounts_payload) STRAPI_SITE_URL=http://127.0.0.1:${PORT} node --input-type=module - $*" < "$SCRIPT"
+  { printf "globalThis.STRAPI_SITE_ACCOUNTS = '%s';\n" "$(accounts_payload)"; cat "$SCRIPT"; } \
+    | ddev exec -d "$APP" "STRAPI_SITE_URL=http://127.0.0.1:${PORT} node --input-type=module - $*"
 }
 
 wait_for_server() {
