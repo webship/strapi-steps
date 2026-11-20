@@ -182,6 +182,24 @@ module.exports = {
 On an app from the Webship Workspace (step 1) the accounts are the same; its
 address goes in `LAUNCH_URL` (step 5).
 
+On an app of your own, turn the admin's release notification off. Unless told
+otherwise, the admin asks GitHub's API for the latest release of Strapi on every
+page it opens; once GitHub's limit for the machine's address is reached, GitHub
+answers 403 and the browser logs `Failed to load resource: the server responded
+with a status of 403 ()` in nearly every scenario (a warning after the scenario,
+with no address to tell it from a real refusal). The test app of both ways of
+step 1 has it off already, in `src/admin/app.tsx`; build the admin again after
+the change (`strapi build`):
+
+```typescript
+export default {
+  config: {
+    notifications: { releases: false },
+  },
+  bootstrap() {},
+};
+```
+
 **4. A first feature**, `tests/features/first-run.feature`:
 
 ```gherkin
