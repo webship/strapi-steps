@@ -563,29 +563,32 @@ Text, links, buttons, the status code of a page and the accessibility checks are
 
 The session phrases are the ones every platform pack has, so a feature reads
 the same on every system (one cucumber.js profile per system; the platform packs
-are not meant to be loaded together). Loaded beside each of the 26 published
+are not meant to be loaded together). Loaded beside each of the 29 published
 packs, these phrases of this pack also match one of theirs:
 
 | Phrase of this pack | Also in |
 | --- | --- |
-| `I am a logged in user with the "editor" user` | codeigniter, django-cms, drupal-core, joomla, laravel, mediawiki, odoo, symfony, typo3, wordpress |
-| `I am not logged in` | django-cms, drupal-core, joomla, odoo, typo3, wordpress |
-| `I log out` | codeigniter, django-cms, drupal-core, laravel, mediawiki, odoo, symfony, typo3, wordpress |
-| `I should be logged in` / `I should be logged in as "editor"` | backdrop-cms, codeigniter, django-cms, drupal-core, laravel, mediawiki, odoo, symfony, typo3, wordpress |
-| `I should not be logged in` | codeigniter, django-cms, drupal-core, laravel, mediawiki, odoo, symfony, typo3, wordpress |
-| `I log in as "editor" with the login form` | codeigniter, laravel, mediawiki, symfony |
-| `I log in with the email "…" and the password "…"` | codeigniter, laravel |
-| `the login should be refused with "…"` | mediawiki |
-| `I should be on the admin login page` | joomla |
+| `I am a logged in user with the "editor" user` | codeigniter, django, django-cms, drupal-core, joomla, laravel, mediawiki, moodle, nextjs, odoo, symfony, typo3, wordpress |
+| `I am not logged in` | django, django-cms, drupal-core, joomla, odoo, typo3, wordpress |
+| `I log out` | codeigniter, django, django-cms, drupal-core, laravel, mediawiki, moodle, nextjs, odoo, symfony, typo3, wordpress |
+| `I should be logged in` / `I should be logged in as "editor"` | backdrop-cms, codeigniter, django, django-cms, drupal-core, laravel, mediawiki, moodle, nextjs, odoo, symfony, typo3, wordpress |
+| `I should not be logged in` | codeigniter, django, django-cms, drupal-core, laravel, mediawiki, moodle, nextjs, odoo, symfony, typo3, wordpress |
+| `I log in as "editor" with the login form` | codeigniter, django, laravel, mediawiki, moodle, nextjs, symfony |
+| `I log in with the email "…" and the password "…"` | codeigniter, laravel, nextjs |
+| `the login should be refused with "…"` | django, mediawiki |
+| `I should be on the admin login page` | django, joomla |
 | `I should see the notification "…"` | craft-cms, ghost, laravel, odoo, prestashop, typo3 |
-| `I search the list for "…"` | joomla |
-| `I sort the list by "…"`, `the first row of the list should be "…"` | ghost, prestashop |
-| `the list should have 3 pages`, `I go to page 2 of the list`, `the list should be on page 2` | ghost, symfony |
-| `the list should have 10 rows` | prestashop |
-| `I should not be allowed to open "…"` | django-cms |
+| `I search the list for "…"` | django, joomla |
+| `I sort the list by "…"`, `the first row of the list should be "…"` | django, ghost, prestashop |
+| `the list should have 3 pages`, `I go to page 2 of the list`, `the list should be on page 2` | django, ghost, symfony |
+| `the list should have 10 rows` | django, prestashop |
+| `I should not be allowed to open "…"` | django, django-cms |
+| `I am on the "…" list`, `I open "…" from the list`, `the list should count … entries`, `the list should show "…"`, `the "…" row should show "…" in the "…" column`, `I select "…" in the list`, `the selection should read "…"`, `I set "…" to "…"`, `I set these fields:`, `"…" should be set to "…"` | django |
 
-None matches a webship-js step, and none matches a phrase of the component pack
-(Bootstrap) or of the Diffy pack, which can be loaded beside this one.
+The Django admin pack shares the most: both test an admin, with a list, a form
+and a session, and say it the same way. None matches a webship-js step, and none
+matches a phrase of the component pack (Bootstrap) or of the Diffy pack, which
+can be loaded beside this one.
 
 ## Testing this package
 
