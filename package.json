@@ -1,0 +1,65 @@
+{
+  "name": "@webship-js/strapi-steps",
+  "version": "2.0.0",
+  "description": "Cucumber step definitions for the Strapi admin panel, a plugin for webship-js (Playwright and Cucumber): the admin login and logout; the Content Manager list with its search, filters, sorting, columns, pages and bulk publish, unpublish and delete; the edit view with every kind of field, the relation and media pickers and the dynamic zone; draft and publish with the modified state; locales; the Media Library; the Content-Type Builder, read only; the admin roles, the end-user roles and the API tokens.",
+  "main": "tests/step-definitions/strapi-session.steps.js",
+  "files": [
+    "tests/step-definitions/",
+    "tests/features/",
+    "tests/assets/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "cucumber-js --config cucumber.js",
+    "test:dry": "cucumber-js --config cucumber.js --dry-run",
+    "test:examples": "node tests/check-examples.js",
+    "test:paths": "node tests/check-paths.js",
+    "test:must-fail": "node tests/check-must-fail.js",
+    "test:chromium": "BROWSER=chromium cucumber-js --config cucumber.js",
+    "test:firefox": "BROWSER=firefox cucumber-js --config cucumber.js",
+    "test:webkit": "BROWSER=webkit cucumber-js --config cucumber.js",
+    "test:headed": "HEADLESS=false cucumber-js --config cucumber.js",
+    "generate-reports": "generate-reports",
+    "test:fast": "SLOW_MO=0 cucumber-js --config cucumber.js"
+  },
+  "keywords": [
+    "webship-js",
+    "strapi",
+    "headless-cms",
+    "admin",
+    "cucumber",
+    "cucumber-js",
+    "playwright",
+    "bdd",
+    "testing",
+    "e2e",
+    "gherkin"
+  ],
+  "author": "Webship.co",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webship/strapi-steps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webship/strapi-steps/issues"
+  },
+  "homepage": "https://github.com/webship/strapi-steps#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">= 20.0"
+  },
+  "peerDependencies": {
+    "webship-js": "^2.0.16"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.0",
+    "webship-js": "^2.0.16"
+  },
+  "overrides": {
+    "@cucumber/cucumber": "^12"
+  }
+}
