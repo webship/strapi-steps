@@ -58,7 +58,7 @@ the assertions that must fail; see
 
 ## From nothing to a green run
 
-What the machine needs: Docker, [DDEV](https://ddev.com), git, and Node.js 20 or
+What the machine needs: Docker, [DDEV](https://ddev.com), git, and Node.js 24 or
 later with npm. Node.js 24, the app, its admin and PostgreSQL run in DDEV's
 containers.
 
@@ -287,7 +287,7 @@ public REST and GraphQL APIs (webship-js's own API steps cover them).
 
 ## Requirements
 
-- Node.js 20 or later
+- Node.js 24 or later
 - A webship-js 2.0 test project (webship-js 2.0.16 or later)
 - A Strapi 5 app (5.63 or later) with accounts of the admin for the suite (a
   Super Admin among them, for the test-entry steps)
