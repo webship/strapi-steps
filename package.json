@@ -1,6 +1,6 @@
 {
   "name": "@webship-js/strapi-steps",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Cucumber step definitions for the Strapi admin panel, a plugin for webship-js (Playwright and Cucumber): the admin login and logout; the Content Manager list with its search, filters, sorting, columns, pages and bulk publish, unpublish and delete; the edit view with every kind of field, the relation and media pickers and the dynamic zone; draft and publish with the modified state; locales; the Media Library; the Content-Type Builder, read only; the admin roles, the end-user roles and the API tokens.",
   "main": "tests/step-definitions/strapi-session.steps.js",
   "files": [
